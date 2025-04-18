@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevoFun - Casual Online Games</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="RevoFun Logo" id="logo-placeholder">
+                        <h1>RevoFun</h1>
+                    </a>
+                </div>
+                <nav class="navigation">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="index.html" class="navigation__link active">Home</a></li>
+                        <li class="navigation__item"><a href="#games" class="navigation__link">Games</a></li>
+                        <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                        <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h2 class="hero__title">Play Fun Games Instantly in Your Browser</h2>
+                    <p class="hero__subtitle">No downloads, no installs. Just click and play!</p>
+                    <a href="#games" class="btn btn-primary">Play Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="games">
+            <div class="container">
+                <h2 class="section-title">Our Games</h2>
+                <p class="section-description">Check out our collection of fun and addictive browser-based games!</p>
+                
+                <div class="games__grid">
+                    <div class="game-card">
+                        <div class="game-card__image">
+                            <div class="game-icon">
+                                <i class="fas fa-dice"></i>
+                            </div>
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Number Guessing Game</h3>
+                            <p class="game-card__description">Test your luck! Guess the secret number between 1-100 with hints.</p>
+                            <a href="games/number-guess.html" class="btn btn-secondary">Play Now</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card__image">
+                            <div class="game-icon">
+                                <i class="fas fa-hand-rock"></i>
+                            </div>
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Rock, Paper, Scissors</h3>
+                            <p class="game-card__description">The classic game of chance! Can you outsmart the computer?</p>
+                            <a href="games/rock-paper-scissors.html" class="btn btn-secondary">Play Now</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card__image">
+                            <div class="game-icon">
+                                <i class="fas fa-mouse-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Clicker Game</h3>
+                            <p class="game-card__description">How fast can you click? Test your clicking speed in 30 seconds!</p>
+                            <a href="games/clicker.html" class="btn btn-secondary">Play Now</a>
+                        </div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-card__image">
+                            <div class="game-icon">
+                                <i class="fas fa-clone"></i>
+                            </div>
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Memory Card Game</h3>
+                            <p class="game-card__description">Find matching pairs and train your memory!</p>
+                            <a href="games/memory.html" class="btn btn-secondary">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Play at RevoFun?</h2>
+                
+                <div class="features__grid">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-card__title">Quick & Easy</h3>
+                        <p class="feature-card__description">No downloads or installations needed. Play instantly in your browser.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-card__title">Mobile Friendly</h3>
+                        <p class="feature-card__description">Our games work perfectly on any device, from phones to desktops.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-card__title">Compete & Win</h3>
+                        <p class="feature-card__description">Save your high scores and compete with friends for the top spot.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="feature-card__title">New Games Added</h3>
+                        <p class="feature-card__description">We're constantly adding new games to keep the fun going!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2 class="section-title">About RevoFun</h2>
+                        <p>RevoFun is a new gaming company dedicated to creating fun, accessible, and casual games that anyone can enjoy directly in their web browser.</p>
+                        <p>Our mission is to bring joy to your day with simple yet engaging games that provide a perfect break from your routine.</p>
+                        <p>Whether you have just a few minutes or want to challenge yourself for hours, RevoFun games are designed to be easy to learn but satisfying to master.</p>
+                    </div>
+                    <div class="about__image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta__title">Ready to Play?</h2>
+                <p class="cta__text">Choose a game and start having fun right now!</p>
+                <a href="#games" class="btn btn-primary">Play Games</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="index.html">
+                        <h2>RevoFun</h2>
+                    </a>
+                    <p>Fun games for everyone!</p>
+                </div>
+                <div class="footer__links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@revofun.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 RevoFun. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
