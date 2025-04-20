@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Try to guess the secret number between 1 and 100 in this fun browser game by RevoFun.">
+    <title>Number Guessing Game - RevoFun</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="RevoFun Logo" id="logo-placeholder">
+                        <h1>RevoFun</h1>
+                    </a>
+                </div>
+                <nav class="navigation">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="../index.html" class="navigation__link">Home</a></li>
+                        <li class="navigation__item"><a href="../index.html#games" class="navigation__link">Games</a></li>
+                        <li class="navigation__item"><a href="../index.html#about" class="navigation__link">About</a></li>
+                        <li class="navigation__item"><a href="../index.html#contact" class="navigation__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="game-header">
+            <div class="container">
+                <h1 class="game-title">Number Guessing Game</h1>
+                <p class="game-description">Try to guess the secret number between 1 and 100. You have 5 attempts!</p>
+            </div>
+        </section>
+
+        <section class="game-content">
+            <div class="container">
+                <div class="game-area">
+                    <div class="game-instructions">
+                        <h2>How to Play:</h2>
+                        <ul>
+                            <li>The computer has selected a random number between 1 and 100.</li>
+                            <li>Enter your guess in the input field and click "Submit Guess".</li>
+                            <li>You'll get a hint if your guess is too high or too low.</li>
+                            <li>Try to find the number within 5 attempts!</li>
+                        </ul>
+                    </div>
+
+                    <div class="game-play" id="number-game">
+                        <div id="game-start-screen" class="game-screen active">
+                            <h3>Ready to Play?</h3>
+                            <p>I've selected a random number between 1 and 100.</p>
+                            <button id="start-game" class="btn btn-primary">Start Game</button>
+                        </div>
+
+                        <div id="game-play-screen" class="game-screen">
+                            <div class="game-status">
+                                <p>Attempts Left: <span id="attempts">5</span></p>
+                                <p id="hint-message">Make your first guess!</p>
+                            </div>
+                            
+                            <div class="guess-container">
+                                <div class="guess-input">
+                                    <label for="guess">Your Guess:</label>
+                                    <input type="number" id="guess" min="1" max="100" placeholder="Enter a number (1-100)">
+                                </div>
+                                <button id="submit-guess" class="btn btn-primary">Submit Guess</button>
+                            </div>
+                            
+                            <div class="previous-guesses">
+                                <p>Previous Guesses: <span id="guess-history"></span></p>
+                            </div>
+                        </div>
+
+                        <div id="game-end-screen" class="game-screen">
+                            <h3 id="result-message"></h3>
+                            <p>The correct number was: <span id="correct-number"></span></p>
+                            <p id="attempts-taken"></p>
+                            
+                            <div class="score-container">
+                                <div id="nickname-form">
+                                    <label for="player-nickname">Enter your nickname to save your score:</label>
+                                    <input type="text" id="player-nickname" placeholder="Your nickname" maxlength="15">
+                                    <button id="save-score" class="btn btn-secondary">Save Score</button>
+                                </div>
+                            </div>
+                            
+                            <button id="play-again" class="btn btn-primary">Play Again</button>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard">
+                        <h2>Leaderboard</h2>
+                        <div class="leaderboard-content">
+                            <table id="scores-table">
+                                <caption class="sr-only">Top scores for Number Guessing Game</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Rank</th>
+                                        <th scope="col">Player</th>
+                                        <th scope="col">Attempts</th>
+                                        <th scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body">
+                                    <!-- Leaderboard entries will be added here by JavaScript -->
+                                </tbody>
+                            </table>
+                            <p id="no-scores" class="no-scores">No scores yet. Be the first to play!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="../index.html">
+                        <h2>RevoFun</h2>
+                    </a>
+                    <p>Fun games for everyone!</p>
+                </div>
+                <div class="footer__links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#games">Games</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@revofun.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 RevoFun. All rights reserved.</p>
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/games/number-guess.js"></script>
+</body>
+</html>

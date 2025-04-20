@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game - RevoFun</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="RevoFun Logo" id="logo-placeholder">
+                        <h1>RevoFun</h1>
+                    </a>
+                </div>
+                <nav class="navigation">
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="../index.html" class="navigation__link">Home</a></li>
+                        <li class="navigation__item"><a href="../index.html#games" class="navigation__link">Games</a></li>
+                        <li class="navigation__item"><a href="../index.html#about" class="navigation__link">About</a></li>
+                        <li class="navigation__item"><a href="../index.html#contact" class="navigation__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="game-header">
+            <div class="container">
+                <h1 class="game-title">Clicker Game</h1>
+                <p class="game-description">How fast can you click? Test your clicking speed in 30 seconds!</p>
+            </div>
+        </section>
+
+        <section class="game-content">
+            <div class="container">
+                <div class="game-area">
+                    <div class="game-instructions">
+                        <h2>How to Play:</h2>
+                        <ul>
+                            <li>Click the big button as many times as you can within 30 seconds.</li>
+                            <li>Each click increases your score by one point.</li>
+                            <li>The game automatically ends when the timer runs out.</li>
+                            <li>Try to beat your own high score or compete with friends!</li>
+                        </ul>
+                    </div>
+
+                    <div class="game-play" id="clicker-game">
+                        <div id="game-start-screen" class="game-screen active">
+                            <h3>Ready to Click?</h3>
+                            <p>You have 30 seconds to click as many times as possible!</p>
+                            <button id="start-game" class="btn btn-primary">Start Game</button>
+                        </div>
+
+                        <div id="game-play-screen" class="game-screen">
+                            <div class="game-status">
+                                <div class="timer-container">
+                                    <p>Time Left: <span id="time-left">30</span>s</p>
+                                    <div class="progress-bar">
+                                        <div id="time-progress" class="progress"></div>
+                                    </div>
+                                </div>
+                                <div class="score-container">
+                                    <p>Score: <span id="click-score">0</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="clicker-container">
+                                <button id="click-button" class="click-button">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                    <span>CLICK ME!</span>
+                                </button>
+                            </div>
+                            
+                            <div class="click-stats">
+                                <p>Clicks per second: <span id="clicks-per-second">0.0</span></p>
+                            </div>
+                        </div>
+
+                        <div id="game-end-screen" class="game-screen">
+                            <h3>Game Over!</h3>
+                            <div class="result-container">
+                                <p class="result-score">Your final score: <span id="final-score">0</span></p>
+                                <p class="result-cps">Clicks per second: <span id="final-cps">0.0</span></p>
+                            </div>
+                            
+                            <div class="score-container">
+                                <div id="nickname-form">
+                                    <label for="player-nickname">Enter your nickname to save your score:</label>
+                                    <input type="text" id="player-nickname" placeholder="Your nickname" maxlength="15">
+                                    <button id="save-score" class="btn btn-secondary">Save Score</button>
+                                </div>
+                            </div>
+                            
+                            <button id="play-again" class="btn btn-primary">Play Again</button>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard">
+                        <h2>Leaderboard</h2>
+                        <div class="leaderboard-content">
+                            <table id="scores-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Player</th>
+                                        <th>Clicks</th>
+                                        <th>CPS</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body">
+                                    <!-- Leaderboard entries will be added here by JavaScript -->
+                                </tbody>
+                            </table>
+                            <p id="no-scores" class="no-scores">No scores yet. Be the first to play!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="../index.html">
+                        <h2>RevoFun</h2>
+                    </a>
+                    <p>Fun games for everyone!</p>
+                </div>
+                <div class="footer__links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#games">Games</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@revofun.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 RevoFun. All rights reserved.</p>
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/games/clicker.js"></script>
+</body>
+</html>
